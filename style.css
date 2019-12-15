@@ -19,9 +19,10 @@ body {
     box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
 }
 
+
 .name {
     text-align: center;
-    font-size: 3em;
+    font-size: 3em;    
 }
 
 h2 {
@@ -73,13 +74,26 @@ a:hover {
   position: fixed;
   top: 0;
   width: 100%;
-} */
+}  */
+
+.arrowDown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+.arrowDown > img {
+    width: 64px;
+    height: 64px;
+}
 
 
 
 /***********************************************************************
  *  Grid Panel
  **********************************************************************/
+ 
 .grid-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
