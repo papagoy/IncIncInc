@@ -269,7 +269,6 @@ textarea {
     /* For mobile phones: */
     .project {
         display: grid;
-        grid-template-columns: 1fr 8fr 8fr 8fr 1fr;
-    
-  }
+        grid-template-columns: 1fr 8fr 8fr 8fr 1fr;  
+}
 
