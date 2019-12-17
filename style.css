@@ -50,12 +50,12 @@ p {
     color: black;
 } */
 
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
     .main-nav {
         font-size: 0.5em;
         padding: 0;
     }
-}
+} */
 
 li {
     padding: 20px;
@@ -213,7 +213,11 @@ textarea {
 /***********************************************************************
  *  Projects
  **********************************************************************/
-.project-info{
+
+
+ /* FLEXBOX 
+ 
+ .project-info{
     display:flex;
     flex-direction: column;
     align-items: flex-start;
@@ -237,5 +241,35 @@ textarea {
 
 .project {
     margin-bottom: 40px;
+} */
+
+.project {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1.5fr;
+
 }
+
+.project p {
+    grid-column-start: 2;
+    text-align: left;
+    grid-column-end: 5;
+    margin: 1.5px;
+}
+
+.cover {
+    grid-column-start: 2;
+    grid-column-end: 5;
+}
+
+.cover img {
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .project {
+        display: grid;
+        grid-template-columns: 1fr 8fr 8fr 8fr 1fr;
+    
+  }
 
