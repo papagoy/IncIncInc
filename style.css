@@ -270,5 +270,5 @@ textarea {
     .project {
         display: grid;
         grid-template-columns: 1fr 8fr 8fr 8fr 1fr;  
+    }
 }
-
