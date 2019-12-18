@@ -3,18 +3,29 @@ body {
     font-family: Arial;
 }
 
-
-
-
 /**********************************************
                     MOBILE
 **********************************************/
-
+    /***************
+       General
+    ****************/
 .name {
     text-align: center;
     font-size: 5rem;
     font-family: 'Orbitron', sans-serif;    
 } 
+
+h2 {
+    font-family: 'Orbitron', sans-serif; 
+    text-align: center;
+    font-size: 3rem;
+}
+
+p {
+    font-family: 'Khand', sans-serif;
+    font-size: 1.25rem;
+    text-align: center;
+}
     /***************
         Nav Bar
     ****************/
@@ -39,11 +50,11 @@ a {
     text-decoration: none;
 } 
 
-
 .arrowDown {
     display: none;
 }
 
+/** INDEX **/
    /***************
         Projects
     ****************/
@@ -52,6 +63,7 @@ a {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 15px;
+    margin-bottom: 200px;
 
 }
 
@@ -65,30 +77,26 @@ a {
     margin: auto;
 }
 
-h2 {
-    font-family: 'Orbitron', sans-serif; 
-    text-align: center;
-    font-size: 3rem;
+
+
+    /***************
+        About
+    ****************/
+#about p{
+    margin: 40px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 #about {
-    display: none;
+    margin-bottom: 200px;
 }
 
+    /***************
+        Contact
+    ****************/
+
+
 #contact {
-    display: none;
+    
 }
 
 
