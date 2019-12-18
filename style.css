@@ -9,23 +9,38 @@ body {
     /***************
        General
     ****************/
+
+html {
+    scroll-behavior: smooth;
+}
+
 .name {
     text-align: center;
-    font-size: 5rem;
-    font-family: 'Orbitron', sans-serif;    
+    font-size: 2rem;
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 5px;
 } 
 
 h2 {
     font-family: 'Orbitron', sans-serif; 
     text-align: center;
-    font-size: 3rem;
+    font-size: 1.5rem;
 }
 
 p {
     font-family: 'Khand', sans-serif;
-    font-size: 1.25rem;
+    font-size: 1rem;
     text-align: center;
 }
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    margin-bottom: 0px;
+}
+
     /***************
         Nav Bar
     ****************/
@@ -33,8 +48,8 @@ p {
     display: flex;
     list-style: none;
     margin: 0;
-    margin-bottom: 10vh;
-    font-size: 2.5rem;
+    margin-bottom: 0vh;
+    font-size: 1rem;
     justify-content: center;
     font-family: 'Orbitron', sans-serif;    
     padding: 0;
@@ -42,7 +57,7 @@ p {
 
  li {
     padding: 10px;
-    margin: 0 30px;
+    margin: 0 5px;
 } 
 
 a {
@@ -50,11 +65,15 @@ a {
     text-decoration: none;
 } 
 
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
 .arrowDown {
     display: none;
 }
 
-/** INDEX **/
+/** INDEX PAGE**/
    /***************
         Projects
     ****************/
@@ -62,19 +81,41 @@ a {
 .grid-wrapper {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 15px;
-    margin-bottom: 200px;
+    grid-gap: 2px;
+    margin-bottom: 100px;
 
 }
 
 .box {
     padding: 0;
-    margin: 10px;
+    margin: 3px;
 }
 
 .box img {
     width: 100%;
     margin: auto;
+}
+
+.box:hover {
+    -webkit-transform: rotate(-1deg);
+    -moz-transform: rotate(-1deg);
+    -o-transform: rotate(-1deg);
+    transform: rotate(-1deg);
+}
+
+.zone {
+    padding: 1px;
+    cursor:pointer;
+    color:#FFF; 
+    border-radius: 1px;
+    transition: all .3s linear;
+}
+
+.zone:hover {
+    -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
 }
 
 
@@ -83,11 +124,11 @@ a {
         About
     ****************/
 #about p{
-    margin: 40px;
+    margin: 20px;
 }
 
 #about {
-    margin-bottom: 200px;
+    margin-bottom: 100px;
 }
 
     /***************
@@ -97,28 +138,159 @@ a {
 #contact form{
     display: flex;
     flex-direction: column;
-    margin: 30px;
-    
+    margin: 8px;
 }
 
 #contact input,textarea {
-    padding: 12px 20px;
-    font-size: 3rem;
-    margin: 3px 0px;
-    border: 3px solid black;
-    border-radius: 10px;
+    padding: 6px 10px;
+    font-size: 1rem;
+    margin: 1.5px 0px;
+    border: 1.3px solid black;
+    border-radius: 6px;
 }
 
 #contact input::placeholder, textarea::placeholder, input[type="submit"]{
-    font-size: 2.5rem;
+    font-size: 1rem;
     font-family: 'Orbitron', sans-serif;
 }
 
 #contact input[type="submit"] {
     background-color: black;
     color: white;
-    border-radius: 10px;
+    border-radius: 6px;
 }
+
+
+/** PROJECT PAGE**/
+
+.project {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 0px;
+    margin-bottom: 1px;
+    margin-top: 150px;
+}
+
+.project p {
+    text-align: left;
+    margin: 0 0 0 10px;
+}
+
+.project .dot {
+    font-weight: 900;
+    font-size: 1.2rem;
+    margin-right: 6px;
+}
+
+.project .cover {
+    padding: 0;
+    margin: 0;
+}
+
+.project .cover img {
+    width: 100%;
+    margin: auto;
+}
+
+.arrowUp a{
+    width: 65px;
+    height: 65px;
+}
+.arrowUp img {
+    width: 100%;
+    height: 100%;
+    margin: 10px 0px;
+    transform: rotate(180deg);
+}
+
+/**********************************************
+                    TABLET
+**********************************************/
+@media only screen and (min-width: 768px) {
+
+}
+
+/**********************************************
+                    DESKTOP
+**********************************************/
+@media only screen and (min-width: 992px) {
+/** INDEX PAGE**/
+    /***************
+        Nav Bar
+    ****************/
+    .arrowDown {
+        display: flex;
+        justify-content: center;
+    }
+
+    .arrowDown img {
+        width: 80px;
+        height: 80px;
+        margin: 320px 0px;
+    }
+
+
+   /***************
+        Projects
+    ****************/
+    .grid-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: 0 60px;
+    }
+
+    .grid-wrapper .box {
+        margin: 2px;
+        padding: 8px;
+        border-radius: 2px;
+    }
+
+    .grid-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        border-radius: 2px;
+    }
+
+    .zone {
+        padding:30px 50px;
+        cursor:pointer;
+        color:#FFF; 
+        border-radius: 2px;
+        transition: all .3s linear;
+    }
+
+    /***************
+        Contact
+    ****************/
+    #contact {
+        margin: 0px 550px;
+    }
+
+/** PROJECT PAGE**/
+    .project {
+        margin: 150px 300px 50px 300px;
+    }
+}
+
+
+/** RANDO**/
+
+.arrowUp {
+    display: flex;
+    justify-content: center;
+}
+
+.arrowUp img {
+    width: 80px;
+    height: 80px;
+    margin: 10px 0px;
+    transform: rotate(180deg);
+}
+
+
+
+
 
 
 
@@ -151,15 +323,9 @@ p {
 
  
 
-a:hover {
-    text-decoration: underline;
-}  */
+  */
 
-/* .sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}  */
+  
 
 /* .arrowDown {
     display: flex;
@@ -182,12 +348,7 @@ a:hover {
 
 
 
-.box:hover {
-    -webkit-transform: rotate(-1deg);
-    -moz-transform: rotate(-1deg);
-    -o-transform: rotate(-1deg);
-    transform: rotate(-1deg);
-}
+
 
 .box > img {
     width: 100%;
@@ -296,18 +457,9 @@ textarea {
     }
 } */
 
-/* .zone {
-    padding:30px 50px;
-    cursor:pointer;
-    color:#FFF; 
-     font-size:2em;
-    border-radius: 2px;
-    transition: all 0.3s linear;
+/* 
 }
 
-.zone:hover {
-    -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
-    -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
-    -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
-    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+
 } */
+
