@@ -129,7 +129,16 @@ a {
 }
 
 #about {
-    margin-bottom: 100px;
+    margin-bottom: 0px;
+}
+
+.social-media-buttons {
+    display: flex;
+    justify-content: center;
+}
+.social-media-buttons i{
+    margin: auto 10px;
+    
 }
 
     /***************
@@ -197,6 +206,7 @@ a {
     width: 65px;
     height: 65px;
 }
+
 .arrowUp img {
     width: 100%;
     height: 100%;
@@ -268,10 +278,18 @@ a {
         margin: 0px 550px;
     }
 
+
+
 /** PROJECT PAGE**/
     .project {
-        margin: 150px 300px 50px 300px;
+        margin: 150px 400px 30px 400px;
     }
+
+    .arrowUp {
+        margin-bottom: 30px;
+        margin-top: 0px;
+    }
+
 }
 
 
@@ -287,6 +305,37 @@ a {
     height: 80px;
     margin: 10px 0px;
     transform: rotate(180deg);
+}
+
+/******
+TEST
+*******/
+
+.arrowUpTEST {
+    height: 64px;
+    width: 64px;
+    margin: auto 0px;
+}
+
+.arrowUpTEST img {
+    height: 100%;
+    width: 100%;
+    transform: rotate(180deg);
+}
+
+.arrowUpTEST a {
+    margin: 0px;
+    padding: 0px;
+}
+
+.sticky-bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    margin-bottom: 0px;
+    margin: 0px;
+    padding: 0px;
 }
 
 
