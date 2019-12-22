@@ -1,6 +1,7 @@
 body {
     margin: 0 auto;
     font-family: Arial;
+    background-color: #fcfcfc;
 }
 
 /**********************************************
@@ -29,7 +30,7 @@ h2 {
 
 p {
     font-family: 'Khand', sans-serif;
-    font-size: 1rem;
+    font-size: 1.3rem;
     text-align: center;
 }
 
@@ -178,8 +179,8 @@ a {
 
 .project .dot {
     font-weight: 900;
-    font-size: 1.2rem;
-    margin-right: 6px;
+    font-size: 1.5rem;
+    margin-right: 30px;
 }
 
 .project .cover {
